@@ -1,2 +1,2 @@
 # active-directory-attack-lab
-Hands-on Active Directory lab demonstrating enumeration, privilege escalation, and lateral movement in a simulated enterprise environment.
+Hands-on cybersecurity lab simulating network reconnaissance and service enumeration in a segmented virtual environment using Kali Linux and Windows systems.

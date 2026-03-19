@@ -10,10 +10,14 @@ This lab demonstrates network reconnaissance, firewall evasion, and service enum
   <img src="images/01-network-discovery.png" width="700">
 </p>
 
-- Used `nmap -sn` to identify live hosts
-- Discovered multiple active systems on the subnet
+- Used network discovery scan:
 
----
+```
+nmap -sn 192.168.179.0/24
+```
+
+- Identified live hosts on the subnet
+- Discovered multiple active systems in the lab environment
 
 ## 🚫 2. Initial Scan (All Ports Filtered)
 <p align="center">
@@ -21,17 +25,24 @@ This lab demonstrates network reconnaissance, firewall evasion, and service enum
 </p>
 
 - Conducted a fast scan using:
-nmap -Pn -n -F <target>
 
-- All ports appeared filtered due to firewall restrictions
+```
+nmap -Pn -n -F <target>
+```
+
+- All ports appeared filtered due to firewall restrictions, preventing service enumeration
 
 ## 🔥 3. Firewall Disabled
 <p align="center">
   <img src="images/03-firewall-disabled.png" width="700">
 </p>
 
-- Disabled Windows Firewall using:
+- Disabled Windows Firewall to allow traffic:
+
+```
 netsh advfirewall set allprofiles state off
+```
+- This removed filtering and exposed services to scanning
 
 ## 🖥️ 4. RDP Enabled
 <p align="center">
@@ -39,8 +50,13 @@ netsh advfirewall set allprofiles state off
 </p>
 
 - Enabled Remote Desktop:
+
+```
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
 netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
+```
+
+- This exposed port 3389 for remote access
 
 ## ✅ 5. Final Scan (Successful Enumeration)
 <p align="center">
@@ -52,6 +68,8 @@ netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
 - 139 (NetBIOS)
 - 445 (SMB)
 - 3389 (RDP)
+
+- Services became visible after firewall was disabled and RDP was enabled
 
 ## 🧠 Key Takeaways
 - Firewalls can completely obscure attack surface visibility

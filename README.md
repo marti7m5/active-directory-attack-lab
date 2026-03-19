@@ -63,6 +63,12 @@ netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
   <img src="images/05-final-scan.png" width="700">
 </p>
 
+- Re-ran the port scan:
+
+```
+nmap -Pn -n -F <target>
+```
+
 - Open ports identified:
 - 135 (MSRPC)
 - 139 (NetBIOS)

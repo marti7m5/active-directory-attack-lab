@@ -16,6 +16,8 @@ This lab demonstrates network reconnaissance, firewall evasion, and service enum
   <img src="images/06-network-diagram.png" width="700">
 </p>
 
+This diagram represents the attacker-to-target architecture used during reconnaissance and service enumeration.
+
 ---
 
 ## 🔍 1. Network Discovery
@@ -94,7 +96,7 @@ nmap -Pn -n -F 192.168.179.10
 ## 🧠 MITRE ATT&CK Mapping
 
 - Network Discovery → T1046 (Network Service Discovery)
-- Service Enumeration → T1046
+- Service Enumeration → T1046 (Network Service Discovery)
 - Remote Desktop Access → T1021.001 (Remote Services: RDP)
 
 ## 📘 Lessons Learned

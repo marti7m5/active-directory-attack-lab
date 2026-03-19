@@ -49,8 +49,9 @@ nmap -Pn -n -F 192.168.179.10
 ```
 netsh advfirewall set allprofiles state off
 ```
-- This removed filtering and exposed services to scanning
 
+- This removed firewall filtering and exposed previously hidden services to enumeration
+  
 ## 🖥️ 4. RDP Enabled
 <p align="center">
   <img src="images/04-rdp-enabled.png" width="700">
@@ -88,3 +89,9 @@ nmap -Pn -n -F <target>
 - Firewalls can completely obscure attack surface visibility
 - Service exposure drastically changes after misconfiguration
 - Enumeration is critical before exploitation
+
+## 🎯 Security Impact
+
+- Disabling firewall protections significantly increases attack surface
+- Exposed services such as SMB and RDP are common entry points for attackers
+- Misconfigurations like these can lead to lateral movement or full system compromise

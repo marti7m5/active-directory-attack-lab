@@ -94,4 +94,4 @@ nmap -Pn -n -F <target>
 
 - Disabling firewall protections significantly increases attack surface
 - Exposed services such as SMB and RDP are common entry points for attackers
-- Misconfigurations like these can lead to lateral movement or full system compromise
+- Misconfigurations like these can lead to lateral movement or full system compromise in a real-world environment

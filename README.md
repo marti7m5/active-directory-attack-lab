@@ -3,6 +3,13 @@
 ## 🖥️ Lab Overview
 This lab demonstrates network reconnaissance, firewall evasion, and service enumeration against a Windows Server in a controlled environment.
 
+## 🧪 Lab Environment
+
+- Attacker Machine: Kali Linux
+- Target Machine: Windows Server
+- Virtualization: VMware
+- Network: 192.168.179.0/24 (Host-only)
+
 ---
 
 ## 🔍 1. Network Discovery
@@ -27,7 +34,7 @@ nmap -sn 192.168.179.0/24
 - Conducted a fast scan using:
 
 ```
-nmap -Pn -n -F <target>
+nmap -Pn -n -F 192.168.179.10
 ```
 
 - All ports appeared filtered due to firewall restrictions, preventing service enumeration

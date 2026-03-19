@@ -6,7 +6,7 @@ This lab demonstrates network reconnaissance, firewall evasion, and service enum
 ---
 
 ## 🔍 1. Network Discovery
-![Network Discovery](images/01-network-discovery.png)
+[Network Discovery](images/01-network-discovery.png)
 
 - Used `nmap -sn` to identify live hosts
 - Discovered multiple active systems on the subnet
@@ -14,7 +14,7 @@ This lab demonstrates network reconnaissance, firewall evasion, and service enum
 ---
 
 ## 🚫 2. Initial Scan (All Ports Filtered)
-![Initial Scan](images/02-initial-scan-filtered.png)
+[Initial Scan](images/02-initial-scan-filtered.png)
 
 - Conducted a fast scan using:
 nmap -Pn -n -F <target>
@@ -22,20 +22,20 @@ nmap -Pn -n -F <target>
 - All ports appeared filtered due to firewall restrictions
 
 ## 🔥 3. Firewall Disabled
-![Firewall Disabled](images/03-firewall-disabled.png)
+[Firewall Disabled](images/03-firewall-disabled.png)
 
 - Disabled Windows Firewall using:
 netsh advfirewall set allprofiles state off
 
 ## 🖥️ 4. RDP Enabled
-![RDP Enabled](images/04-rdp-enabled.png)
+[RDP Enabled](images/04-rdp-enabled.png)
 
 - Enabled Remote Desktop:
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
 netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
 
 ## ✅ 5. Final Scan (Successful Enumeration)
-![Final Scan](images/05-final-scan.png)
+[Final Scan](images/05-final-scan.png)
 
 - Open ports identified:
 - 135 (MSRPC)

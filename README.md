@@ -10,6 +10,12 @@ This lab demonstrates network reconnaissance, firewall evasion, and service enum
 - Virtualization: VMware
 - Network: 192.168.179.0/24 (Host-only)
 
+## 🌐 Network Diagram
+
+<p align="center">
+  <img src="images/06-network-diagram.png" width="700">
+</p>
+
 ---
 
 ## 🔍 1. Network Discovery

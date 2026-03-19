@@ -80,7 +80,7 @@ netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
 - Re-ran the port scan:
 
 ```
-nmap -Pn -n -F <target>
+nmap -Pn -n -F 192.168.179.10
 ```
 
 - Open ports identified:

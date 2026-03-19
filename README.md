@@ -85,10 +85,17 @@ nmap -Pn -n -F <target>
 
 - Services became visible after firewall was disabled and RDP was enabled
 
-## 🧠 Key Takeaways
-- Firewalls can completely obscure attack surface visibility
-- Service exposure drastically changes after misconfiguration
-- Enumeration is critical before exploitation
+## 🧠 MITRE ATT&CK Mapping
+
+- Network Discovery → T1046 (Network Service Discovery)
+- Service Enumeration → T1046
+- Remote Desktop Access → T1021.001 (Remote Services: RDP)
+
+## 📘 Lessons Learned
+
+- Firewalls can completely obscure network visibility during reconnaissance  
+- Misconfigurations significantly increase attack surface  
+- Proper enumeration is critical before attempting exploitation 
 
 ## 🎯 Security Impact
 
